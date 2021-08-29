@@ -1,0 +1,93 @@
+.personalContainer {
+  width: 100%;
+  height: 100%;
+}
+/* 上半部分区域 */
+.personalContainer .user-section {
+  height: 520rpx;
+  position: relative;
+  padding: 100rpx 30rpx 0;
+}
+.user-section .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.7;
+  filter: blur(1px);
+}
+/* 用户信息栏 */
+.user-info-box {
+  height: 180rpx;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+.user-info-box .portrait {
+  width: 130rpx;
+  height: 130rpx;
+  border: 5rpx solid #fff;
+  border-radius: 50%;
+}
+.user-info-box .username {
+  font-size: 24;
+  color: #303133;
+  margin-left: 20rpx;
+}
+/* 下半部分区域 */
+.cover-container {
+  margin-top: -150rpx;
+  padding: 0 30rpx;
+  position: relative;
+  background: #f5f5f5;
+  padding-bottom: 20rpx;
+}
+
+.cover-container .arc {
+  position: absolute;
+  left: 0;
+  top: -34rpx;
+  width: 100%;
+  height: 36rpx;
+}
+/* 导航部分 */
+.cover-container .nav-section {
+  display: flex;
+  background: #fff;
+  padding: 20rpx 0;
+  border-radius: 15rpx;
+}
+.nav-section .nav-item {
+  width: 25%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-section .nav-item text:last-child {
+  font-size: 22rpx;
+}
+/* 个人中心列表 */
+.personalContent {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+/* 用户个人数据列表 */
+.cardList {
+  margin-top: 20rpx;
+}
+.cardList .card-item {
+  border-top: 1rpx solid #eee;
+  height: 80rpx;
+  line-height: 80rpx;
+  padding: 10rpx;
+  font-size: 26rpx;
+  color: #333;
+}
+.cardList .card-item .more {
+  float: right;
+}

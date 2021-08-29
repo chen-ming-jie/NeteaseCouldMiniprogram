@@ -1,0 +1,35 @@
+<view class="wrap">
+<view class="content">
+ <view class="contentLeft">
+  <image lazy-load src="{{pirUrl}}"></image>
+  <text class="playCount">{{playCount}}</text>
+ </view>
+ <view class="contentRight">
+  <view class="title">{{title}}</view>
+  <view class="cloundMusic">
+  <image lazy-load src="../../img/网易云.png"></image>网易云音乐
+  </view>
+  <view class="dirction">{{dirction}}</view>
+ </view>
+
+</view>
+<button open-type="share" class="fx">分享给好友</button>
+<view class="songList">
+<view class="playAllBtn">
+<image lazy-load src="../../img/play01.png"></image>
+播放全部
+<text class="count">共{{listCount}}首</text>
+</view>
+<!--歌曲列表-->
+<view class="item" wx:for="{{playList}}">
+<image class="pirurl" src="{{item.al.picUrl}}" lazy-load></image>
+<view class="center">
+  <view class="top">{{item.name}}</view>
+  <view class="bottom">
+    <image class="mv" src="../../img/MV.png" wx:if="{{item.mv>0}}"></image>
+  {{item.ar[0].name}}</view>
+</view>
+<image lazy-load class="playBtn" data-id="{{item.id}}" bindtap="toPlay" src="../../img/播放.png"></image>
+</view>
+</view>
+</view>

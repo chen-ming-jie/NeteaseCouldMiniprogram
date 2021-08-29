@@ -1,0 +1,16 @@
+<view>
+<input class="searchBox" type="text" placeholder="搜索歌曲" placeholder-class="placeholder" bindtap="goSearch">
+<icon type="search" class="searchIcon"></icon>
+</input>
+<!-- 歌单 -->
+<view class="content">
+  <view wx:for="{{4}}" wx:key="{{playlistArray[index].id}}" class="content_item">
+  <image class="picUrL" src="{{playlistArray[index].coverImgUrl}}" bindtap="toDetails" data-id="{{playlistArray[index].id}}"></image>
+  <view class="leftTracks">
+    <view wx:for="{{playlistArray[index].tracks}}" class="firstSecond">
+   {{item.first}}--{{item.second}}
+    </view>
+  </view>
+</view>
+</view>
+</view>

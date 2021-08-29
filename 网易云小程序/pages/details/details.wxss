@@ -1,0 +1,125 @@
+.wrap{
+  background-color: #4a69bd;
+  overflow: hidden;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+  width: 650rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  height: 300rpx;
+  box-sizing: border-box;
+  padding: 30rpx;
+}
+.contentLeft{
+  position: relative;
+}
+.contentLeft>image{
+  height: 240rpx;
+  width: 240rpx;
+  margin-right: 20rpx;
+}
+.playCount{
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+  color: #fff;
+  font-size: 20rpx;
+  line-height: 30rpx;
+}
+.contentRight{
+  flex: 1;
+  color: #fff;
+}
+.contentRight>.title{
+  font-size: 32rpx;
+  font-weight: 600;
+  margin-top: 5rpx;
+}
+.contentRight>.cloundMusic{
+  font-size: 24rpx;
+  height: 40rpx;
+  margin:20rpx 0 30rpx 0;
+  letter-spacing: 3rpx;
+}
+.contentRight>.cloundMusic>image{
+  position: relative;
+  width: 40rpx;
+  height: 40rpx;
+  top: 10rpx;
+  margin-right: 5rpx;
+}
+.dirction{
+  font-size: 20rpx;
+  line-height: 40rpx;
+  height: 80rpx;
+  overflow: hidden;
+  letter-spacing: 2rpx;
+}
+.fx{
+  margin: 40rpx auto;
+  width: 300rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  background-color: rgba(250, 250, 250, .3);
+  color: #eeeeee;
+}
+.songList{
+  background-color: #fff;
+  border-radius:20px 20px 0 0 ;
+  padding: 10rpx 30rpx;
+  box-sizing: border-box;
+}
+.playAllBtn{
+  height: 60rpx;
+  margin-bottom: 30rpx;
+  color: #000;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+.playAllBtn>image{
+  width: 50rpx;
+  height: 50rpx;
+  position: relative;
+  top: 15rpx;
+  margin-right: 15rpx;
+}
+.count{
+  font-size: 24rpx;
+  color: #cccccc;
+}
+.item{
+  display: flex;
+  flex-direction: row;
+  padding: 10rpx;
+}
+.item>.pirurl{
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 20rpx;
+  border-radius: 20rpx;
+}
+.item>.center{
+  flex: 1;
+  font-size: 30rpx;
+  line-height: 40rpx;
+}
+.item>.center>.bottom{
+  font-size: 22rpx;
+  color: #dddddd;
+  display: flex;
+  flex-direction: row;
+}
+.item>.center>.bottom>.mv{
+  width: 58rpx;
+  height: 38rpx;
+  margin-right: 6rpx;
+}
+.playBtn{
+  width: 60rpx;
+  height: 60rpx;
+}

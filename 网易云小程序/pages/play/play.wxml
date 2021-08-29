@@ -1,0 +1,39 @@
+<view class="main">
+  <image class="bg" src="{{imgUrl}}"></image>
+  <view class="container">
+    <!-- <image class="bg" src="{{imgUrl}}"></image> -->
+ <!-- <view class="title">{{songName}}</view> -->
+ <view class="cir">
+  <image class="picUrl" src="{{imgUrl}}" style="animation-play-state: {{isPlay?'running':'paused'}};"></image>
+  <!-- 蒙层 -->
+  <view class="msk">
+    <image class="controll" src="{{(isPlay?'../../img/pause.png':'../../img/play.png')}}" bindtap="playOrPause"></image>
+  </view>
+ </view>
+ <scroll-view scroll-y class="lyric" scroll-top="{{top}}">
+  <view wx:for="{{lyric}}" style="{{location===index?'color:white;':''}}">{{item[1]}}</view>
+ </scroll-view>
+ <button class="btn" open-type="share">分享给微信好友</button>
+ <!-- <view class="tap"></view> -->
+
+ <!-- 评论 -->
+</view>
+<audio src="{{musicUrl}}" id="myAudio" bindtimeupdate="bindtimeupdate"></audio>
+<input type="text" class="content" value="精彩评论" />
+<view class="divLine"></view>
+<view  class="Content" wx:for="{{Wonderfulcomments}}">
+  <view>
+    <view class="ContentTitle">
+      <image class="contentImg" src="{{item.user.avatarUrl}}" alt="" />
+      <text class="ContentName">{{item.user.nickname}}</text>
+    </view>
+    <view class="likedCount">
+        <text >{{item.likedCount}}</text>
+        <image class="Likezan" src="../../img/点赞.png"/>
+      </view>
+  </view>
+  <view class="ContentItem">{{item.content}}</view>
+  <view class="ContentdivLine"></view>
+</view>
+</view>
+ <!-- 评论 -->

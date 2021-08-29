@@ -1,0 +1,34 @@
+<view class="searchContainer">
+    <view class="header">
+        <input class="searchBox" type="text" placeholder="{{placeholderContent}}" placeholder-class="placeholder" focus="true" bindinput="expInput" value="{{inputvalue}}">
+          <icon type="search" class="searchIcon"></icon>
+        </input>
+    </view>
+<!-- 搜索 -->
+    <block wx:if="{{searchList.length}}">
+        <view class="searchContent">
+            <navigator class="searchShow">搜索"{{searchShow}}"</navigator>
+            <view class="searchList">
+                <navigator class="searchItem" url="/pages/play/play?id={{item.id}}" wx:for="{{searchList}}" wx:key="id">
+                  <icon type="search" class="searchIcon1"></icon>
+                    <text class="searchResult">{{item.name}}</text>
+                </navigator>
+            </view>
+        </view>
+    </block>
+<!-- 搜索 -->
+ <!-- 热搜榜 -->
+    <block wx:else>
+      <view class="hotSearch">    
+        <text class="hothead">热搜榜</text>
+        <view class="hotlist">
+            <view class="hotItem" wx:for="{{hotList}}" wx:key="searchWord">
+                <text class="num">{{index + 1}}</text>
+                <text bindtap="searchHot" data-id="{{item.searchWord}}">{{item.searchWord}}</text>
+                <image wx:if="{{item.iconUrl}}" src="{{item.iconUrl}}" class="iconImg"></image>
+            </view>
+        </view>
+    </view>
+</block>
+</view>
+     <!-- 热搜榜 -->
